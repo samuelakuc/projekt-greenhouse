@@ -2,7 +2,7 @@
 <html>
 
 <?php
-$file_path = "parts/head.php";
+$file_path = "parts/header.php";
 if(!include($file_path)){
     echo "Failed to include file $file_path";
 }
@@ -32,7 +32,7 @@ https://templatemo.com/tm-539-simple-house
 							</div>
 						</div>
                         <?php
-                        $file_path = "parts/head.php";
+                        $file_path = "parts/navigation.php";
                         if(!include($file_path)){
                             echo "Failed to include file $file_path";
                         }
@@ -292,7 +292,7 @@ https://templatemo.com/tm-539-simple-house
 		</main>
 
         <?php
-        $file_path = "parts/head.php";
+        $file_path = "parts/footer.php";
         if(!include($file_path)){
             echo "Failed to include file $file_path";
         }
