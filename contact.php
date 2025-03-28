@@ -36,8 +36,8 @@ https://templatemo.com/tm-539-simple-house
 						<nav class="col-md-6 col-12 tm-nav">
 							<ul class="tm-nav-ul">
 								<li class="tm-nav-li"><a href="index.php" class="tm-nav-link">Home</a></li>
-								<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">About</a></li>
-								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link active">Contact</a></li>
+								<li class="tm-nav-li"><a href="about.php" class="tm-nav-link">About</a></li>
+								<li class="tm-nav-li"><a href="contact.php" class="tm-nav-link active">Contact</a></li>
 							</ul>
 						</nav>	
 					</div>
@@ -143,11 +143,12 @@ https://templatemo.com/tm-539-simple-house
 			</div>
 		</main>
 
-		<footer class="tm-footer text-center">
-			<p>Copyright &copy; 2020 Simple House 
-            
-            | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
-		</footer>
+		<?php
+        $file_path = "parts/footer.php";
+        if(!include($file_path)){
+            echo "Failed to include file $file_path";
+        }
+        ?>
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/parallax.min.js"></script>
