@@ -36,8 +36,11 @@ $statement->bindParam(':message', $message);
 
 try {
     $insert = $statement->execute();
-    return $insert;
-} catch (\Exception $exception) {
+    if ($insert) {
+        header("Location: ../thankyou/thankyou.html");
+        exit();
+    }
+} catch (Exception $exception) {
     return false;
 }
 // Zatvorenie pripojenia

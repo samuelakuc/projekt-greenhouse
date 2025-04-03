@@ -73,6 +73,7 @@ https://templatemo.com/tm-539-simple-house
 					          </button>
 					        </div>
 						</form>
+
 					</div>
 					<div class="col-md-6">
 						<div class="tm-address-box">
