@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Simple House - About Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
-    <link href="css/all.min.css" rel="stylesheet" />
-	<link href="css/templatemo-style.css" rel="stylesheet" />
-</head>
-<!--
-
-Simple House
-
-https://templatemo.com/tm-539-simple-house
-
--->
+<?php
+$headerType = 'about';
+include 'parts/header.php';
+?>
 <body> 
 
 	<div class="container">
@@ -170,14 +155,7 @@ https://templatemo.com/tm-539-simple-house
 			</div>
 		</main>
 
-		<?php
-        $file_path = "parts/footer.php";
-        if(!include($file_path)){
-            echo "Failed to include file $file_path";
-        }
-        ?>
-	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/parallax.min.js"></script>
-</body>
-</html>
+<?php
+$footerType = 'about';
+include 'parts/footer.php';
+?>

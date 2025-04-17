@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-
 <?php
-$file_path = "parts/header.php";
-if(!include($file_path)){
-    echo "Failed to include file $file_path";
-}
+$headerType = 'index';
+include 'parts/header.php';
 ?>
 
 <!--
@@ -27,8 +22,8 @@ https://templatemo.com/tm-539-simple-house
 						<div class="col-md-6 col-12">
 							<img src="img/simple-house-logo.png" alt="Logo" class="tm-site-logo" /> 
 							<div class="tm-site-text-box">
-								<h1 class="tm-site-title">Simple House</h1>
-								<h6 class="tm-site-description">new restaurant template</h6>	
+								<h1 class="tm-site-title">Greenhouse garden</h1>
+								<h6 class="tm-site-description">Your favourite greens source</h6>
 							</div>
 						</div>
                         <?php
@@ -44,8 +39,8 @@ https://templatemo.com/tm-539-simple-house
 
 		<main>
 			<header class="row tm-welcome-section">
-				<h2 class="col-12 text-center tm-section-title">Welcome to Simple House</h2>
-				<p class="col-12 text-center">Total 3 HTML pages are included in this template. Header image has a parallax effect. You can feel free to download, edit and use this TemplateMo layout for your commercial or non-commercial websites.</p>
+				<h2 class="col-12 text-center tm-section-title">Welcome to Greenhouse Garden</h2>
+				<p class="col-12 text-center">Experience unique taste and top tier quality greens. Vegetables. Microherbs. Fruit. Decorative (and also edible) flowers. Everything you need, we got your back. You can also see our products served on food:</p>
 			</header>
 			
 			<div class="tm-paging-links">
@@ -291,28 +286,7 @@ https://templatemo.com/tm-539-simple-house
 			</div>
 		</main>
 
-        <?php
-        $file_path = "parts/footer.php";
-        if(!include($file_path)){
-            echo "Failed to include file $file_path";
-        }
-        ?>
-	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/parallax.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			// Handle click on paging links
-			$('.tm-paging-link').click(function(e){
-				e.preventDefault();
-				
-				var page = $(this).text().toLowerCase();
-				$('.tm-gallery-page').addClass('hidden');
-				$('#tm-gallery-page-' + page).removeClass('hidden');
-				$('.tm-paging-link').removeClass('active');
-				$(this).addClass("active");
-			});
-		});
-	</script>
-</body>
-</html>
+<?php
+$footerType = 'index';
+include 'parts/footer.php';
+?>
