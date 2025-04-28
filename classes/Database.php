@@ -44,4 +44,4 @@ class Database {
         $this->conn = null;
     }
 }
-?>
+

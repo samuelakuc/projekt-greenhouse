@@ -15,13 +15,12 @@ $message = $_POST["message"];
 try {
     $insert = $kontakt->pridajKontakt($name, $email, $message);
 
-    // Ak bolo vloženie úspešné, presmerujeme užívateľa
+
     if ($insert) {
         header("Location: ../thankyou/thankyou.html");
         exit();
     }
 } catch (Exception $exception) {
-    // Chyba pri vykonávaní SQL príkazu
     die("Chyba: " . $exception->getMessage());
 }
 
