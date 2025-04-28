@@ -42,15 +42,15 @@ include 'parts/header.php';
 					<div class="col-md-6">
 						<form action="database/databaza_formular.php" method="POST" class="tm-contact-form">
 					        <div class="form-group">
-					          <input type="text" name="name" id="name" class="form-control" placeholder="Name" required="" />
+                                <label for="name"></label><input type="text" name="name" id="name" class="form-control" placeholder="Name" required="" />
 					        </div>
 					        
 					        <div class="form-group">
-					          <input type="email" name="email" id="email" class="form-control" placeholder="Email" required="" />
+                                <label for="email"></label><input type="email" name="email" id="email" class="form-control" placeholder="Email" required="" />
 					        </div>
 				
 					        <div class="form-group">
-					          <textarea rows="5" name="message" id="message" class="form-control" placeholder="Message" required=""></textarea>
+                                <label for="message"></label><textarea rows="5" name="message" id="message" class="form-control" placeholder="Message" required=""></textarea>
 					        </div>
 					
 					        <div class="form-group tm-d-flex">
