@@ -1,0 +1,114 @@
+/* Nastavenie základného dizajnu pre login stránku */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Formulár */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Vstupy vo formulári */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Tlačidlo na prihlásenie */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Tlačidlo na prihlásenie (hover efekt) */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Chybová správa */
+p {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Vylepšenie pre tabuľku */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+/* Pridanie okrajov a tieňov k tabuľke */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Zväčšenie pravého okraja tabuľky */
+table {
+    margin-right: 20px;
+}
+
+/* Zmeniť štýl pre nadpis nad formulárom */
+h2 {
+    margin-top: 30px;
+    font-size: 28px;
+    color: #333;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-btn {
+    width: 200px; /* Šírka tlačidla */
+    height: 50px; /* Výška tlačidla */
+    padding: 10px 20px; /* Vnútorné odsadenie (10px zhora a zdola, 20px zľava a sprava) */
+    background-color: #28a745; /* Zelená farba */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Zruší podčiarknutie textu */
+    display: inline-block; /* Zabezpečí, že tlačidlo nebude na celú šírku */
+    margin-top: 20px;
+}
+
+.back-btn:hover {
+    background-color: #218838; /* Tmavšia zelená pri hover */
+    transition: background-color 0.3s ease; /* Hladký prechod farby */
+}
+

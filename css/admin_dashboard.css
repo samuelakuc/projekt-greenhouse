@@ -1,0 +1,92 @@
+/* Globálne nastavenia pre administráciu */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hlavička administrácie */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Štýl pre odkazy v administrácii */
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Formulár pre pridanie zamestnanca */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Zoznam zamestnancov */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table td a {
+    margin: 0 10px;
+    color: #3498db;
+}
+
+table td a:hover {
+    color: #2980b9;
+}

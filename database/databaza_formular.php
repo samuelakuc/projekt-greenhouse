@@ -11,7 +11,6 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $message = $_POST["message"];
 
-// Pokus o pridanie kontaktu do databázy
 try {
     $insert = $kontakt->pridajKontakt($name, $email, $message);
 

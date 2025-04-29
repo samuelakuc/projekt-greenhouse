@@ -38,9 +38,19 @@ case 'index':
         case 'about':
             ?>
 <footer class="tm-footer text-center">
+    <?php if (isset($_SESSION['user'])): ?>
+        <div class="col-12">
+            <p>Vitajte, <?php echo $_SESSION['user']; ?>! Ste prihlásený do administrácie.</p>
+        </div>
+    <?php else: ?>
+        <div class="col-12">
+            <p>Nie ste prihlásený. <a href="../crud/login.php">Kliknite sem pre prihlásenie</a></p>
+        </div>
     <p>Copyright &copy; 2020 Simple House
 
         | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+
+    <?php endif; ?>
 </footer>
 </div>
 <script src="js/jquery.min.js"></script>

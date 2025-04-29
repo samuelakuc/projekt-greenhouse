@@ -1,8 +1,8 @@
 <?php
-// Database.php
 
 // Zahrnutie konfiguračného súboru
-include_once '../database/db_config.php';
+include_once(__DIR__ . '/../database/db_config.php');
+
 
 class Database {
     private $conn = null;
