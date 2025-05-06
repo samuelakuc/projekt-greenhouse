@@ -1,6 +1,11 @@
 <?php
 $headerType = 'contact';
 include 'parts/header.php';
+
+require_once 'classes/FAQ.php';
+
+$faq = new FAQ();
+$faqs = $faq->getAllFaqs();
 ?>
 
 <body> 
@@ -24,6 +29,14 @@ include 'parts/header.php';
 								<li class="tm-nav-li"><a href="index.php" class="tm-nav-link">Home</a></li>
 								<li class="tm-nav-li"><a href="about.php" class="tm-nav-link">About</a></li>
 								<li class="tm-nav-li"><a href="contact.php" class="tm-nav-link active">Contact</a></li>
+                                <?php if (isset($_SESSION['user'])): ?>
+                                    <!-- Ak je používateľ prihlásený -->
+                                    <li class="tm-nav-li"><a href="crud/admin_dashboard.php" class="tm-nav-link">Admin Dashboard</a></li>
+                                    <li class="tm-nav-li"><a href="crud/logout.php" class="tm-nav-link">Logout</a></li>
+                                <?php else: ?>
+                                    <!-- Ak nie je prihlásený -->
+                                    <li class="tm-nav-li"><a href="crud/login.php" class="tm-nav-link">Login</a></li>
+                                <?php endif; ?>
 							</ul>
 						</nav>	
 					</div>
@@ -105,26 +118,16 @@ include 'parts/header.php';
 						<h2 class="text-center tm-section-title">FAQs</h2>
 						<p class="text-center">This section comes with Accordion tabs for different questions and answers about Simple House HTML CSS template. Thank you. #666</p>
 						<div class="tm-accordion">
-							<button class="accordion">1. Fusce eu lorem et dui #09C maximus varius?</button>
-							<div class="panel">
-							  <p>#666 Duis blandit purus vel nenenatis rutrum. Pellentesque pellentesque tindicunt lorem, ac egestas massa sollicitudin vel. Nam scelerisque vulputate quam mollis pretium. Morbi condimentum volutpat.</p>
-							</div>
-							
-							<button class="accordion">2. Vestibulum #999 ante ipsum primis in faucibus orci?</button>
-							<div class="panel">
-							  <p>Mauris euismod odio at commodo rhoncus. Maecenas nec interdum purus, sed auctor est. Sed eleifend urna nec diam consectetur, a aliquet turpis facilisis. Integer est sapien, sagittis vel massa vel, interdum euismod erat. Aenean sollicitudin nisi neque, efficitur posuere urna rutrum porta.</p>
-							</div>
-							
-							<button class="accordion">3. Can I redistribute this template as a ZIP file?</button>
-							<div class="panel">
-							  <p>Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to <a href="https://templatemo.com/contact">contact TemplateMo</a> for additional permissions about our templates. Thank you.</p>
-							</div>
-							
-							<button class="accordion">4. Ut ac erat sit amet neque efficitur faucibus et in lectus?</button>
-							<div class="panel">
-								<p>Vivamus viverra pretium ultricies. Praesent feugiat, sapien vitae blandit efficitur, sem nulla venenatis nunc, vel maximus ligula sem a sem. Pellentesque ligula ex, facilisis ac libero a, blandit ullamcorper enim.</p>
-							</div>
-						</div>	
+                            <div class="tm-accordion">
+                                <?php foreach ($faqs as $index => $item): ?>
+                                    <button class="accordion"><?php echo ($index + 1) . '. ' . htmlspecialchars($item['question']); ?></button>
+                                    <div class="panel">
+                                        <p><?php echo nl2br(htmlspecialchars($item['answer'])); ?></p>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+
+                        </div>
 					</div>
 				</div>
 			</div>
